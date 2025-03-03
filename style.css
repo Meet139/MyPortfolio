@@ -1,0 +1,307 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+    display: none;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 10rem 5%;
+    text-align: center;
+}
+
+.home-img img {
+    width: 28vw;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #b74b4b;
+    transition: 0.3s ease;
+}
+
+.home-content h1 {
+    font-size: 5rem;
+}
+
+.typing-text {
+    font-size: 3rem;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem 2.8rem;
+    background: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #b74b4b;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b74b4b;
+    color: black;
+    box-shadow: 0 0 15px #b74b4b;
+}
+
+/* Responsive Design */
+@media (max-width: 995px) {
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background: #161616;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease;
+    }
+
+    nav a {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+
+    nav.show {
+        right: 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-img img {
+        width: 60vw;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 5%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .home-img img {
+        width: 70vw;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .typing-text {
+        font-size: 2rem;
+    }
+}
+
+
+
+.contact {
+    text-align: center;
+    padding: 8rem 5%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #b74b4b;
+}
+
+.contact-info p {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.contact-info a {
+    color: #b74b4b;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+/* Responsive Design Fixes */
+@media (max-width: 768px) {
+    .contact {
+        padding: 5rem 3%;
+    }
+
+    .contact h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-info p {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+.typing-text ::after {
+    content: "Web Developer"; /* Default text */
+    animation: words 10s infinite;
+    color: #b35450; /* Maroon */
+    font-weight: bold;
+}
+
+/* Keyframes for animated text */
+@keyframes words {
+    0%, 20% {
+        content: "Web Developer";
+        color: #b35450; /* Soft Maroon */
+    }
+    21%, 40% {
+        content: "Laravel Developer";
+        color: #b35450; /* Soft Maroon */
+    }
+    41%, 60% {
+        content: "Web Designer";
+        color: #b35450; /* Soft Maroon */
+    }
+    61%, 80% {
+        content: "IT & Network";
+        color: #b35450; /* Soft Maroon */
+    }
+    81%, 100% {
+        content: "Hardware";
+        color: #b35450; /* Soft Maroon */
+    }
+}
+
+/* Background */
+body {
+    background-color: #000; /* Black */
+    color: white; /* Default text color */
+}
+
+
+
+
+
+.skills-list {
+    list-style: none; /* Removes default bullets */
+    padding-left: 0; /* Aligns content properly */
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.skills-list li b {
+    color: #ff6b6b; /* Adjust color for emphasis */
+    margin-left: 5px;
+}
